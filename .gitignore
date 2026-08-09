@@ -1,9 +1,6 @@
 # 项目数据目录（本地会话状态，不进入仓库）
 .codebuddy/
 
-# 独立仓库《数学基础》（本地工作副本，不在主仓库跟踪）
-math-foundation/
-
 # Node
 node_modules/
 
