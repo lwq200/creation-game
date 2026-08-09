@@ -1,33 +1,10 @@
 # 创世游戏 · Socratic Book Coauthor
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![CodeBuddy Skill](https://img.shields.io/badge/CodeBuddy-Skill-6C4DFF)](https://www.codebuddy.ai/)
 
-**苏格拉底对话体共创技术/教育类书籍的 CodeBuddy Skill。**
+**苏格拉底对话体共创技术/教育类书籍的 AI 写作工作流。**
 
 毒舌导师「老谟」与「造物主」（读者替身）一问一答，让读者**从零重新推导**知识体系——每一个概念都在对话中「重新发明」一遍。不是灌输结论，是把知识诞生的每一步踩给你看。
-
----
-
-## 快速开始
-
-### 安装 Skill
-
-将此仓库克隆到 CodeBuddy 的 skill 目录：
-
-```bash
-# 项目级安装（仅当前项目可用）
-git clone https://github.com/lwq200/creation-game.git .codebuddy/skills/socratic-book-coauthor
-
-# 用户级安装（所有项目可用）
-git clone https://github.com/lwq200/creation-game.git ~/.codebuddy/skills/socratic-book-coauthor
-```
-
-或将 `.codebuddy/skills/socratic-book-coauthor/` 文件夹直接拖入 CodeBuddy 窗口。
-
-### 触发词
-
-写教材、共创书、对话体、老谟、造物主、继续第 N 章、创世游戏。
 
 ---
 
@@ -45,9 +22,38 @@ git clone https://github.com/lwq200/creation-game.git ~/.codebuddy/skills/socrat
 
 ---
 
+## 人物设定
+
+| 角色 | 身份 | 话风 |
+|------|------|------|
+| **老谟** | 毒舌导师，风趣一针见血，专治想当然 | "先别急着记结论。如果让你从零造，你第一步干什么？" |
+| **造物主** | 初学者替身，好奇、爱追问、会犯错 | "等等，那这个约定是谁定的？凭什么？" |
+
+> 详细人设与话术库见 [`skills/socratic-book-coauthor/references/人物设定与话术.md`](skills/socratic-book-coauthor/references/人物设定与话术.md)
+
+---
+
+## 创作流程
+
+五阶段工作流：
+
+```
+蓝图 v0.1 → 补充计划 v0.2 → 章节写作 → 质量检查 → 统稿组装
+```
+
+| 阶段 | 产出 | 关键动作 |
+|------|------|----------|
+| **蓝图** | 全书骨架 | 外部课纲调研 → 按认知依赖重排 → 每章一句话主题 + 切入问题 |
+| **补充计划** | 章节级设计 | 知识点拆分、预计对话轮数、风险登记 |
+| **章节写作** | 每章 `.md` | ≥6 轮对话、≥5000 字、Mermaid 图、计算板块分离 |
+| **质量检查** | 评审报告 | 13 项必过清单（对话轮数、字数、推导自洽、人设一致等） |
+| **统稿组装** | 成品书 | 统一语气/篇幅、章节衔接、打包分发 |
+
+---
+
 ## 样书：《数学基础》（17 章）
 
-本仓库附带一本完整样书，展示本 skill 的**全流程产出**（从蓝图到 17 章定稿）：
+本仓库附带一本完整样书，展示 Skill 的**全流程产出**（从蓝图到 17 章定稿）：
 
 ```
 book/
@@ -86,8 +92,8 @@ book/
 ```
 .
 ├── README.md                           # 本文件
-├── .codebuddy/skills/socratic-book-coauthor/
-│   ├── SKILL.md                        # Skill 定义（人物设定、核心原则、创作流程）
+├── skills/socratic-book-coauthor/
+│   ├── SKILL.md                        # 人物设定、核心原则、创作流程
 │   └── references/
 │       ├── 人物设定与话术.md            # 老谟/造物主详细人设 + 毒舌话术库
 │       ├── 章节写作规范.md              # 章节结构、格式元素、Mermaid 规范
@@ -102,35 +108,6 @@ book/
 └── dist/                               # 成品打包
     └── 数学基础_17章_*.zip
 ```
-
----
-
-## 创作流程
-
-本 skill 的书籍创作分五阶段：
-
-```
-蓝图 v0.1 → 补充计划 v0.2 → 章节写作 → 质量检查 → 统稿组装
-```
-
-| 阶段 | 产出 | 关键动作 |
-|------|------|----------|
-| **蓝图** | 全书骨架 | 外部课纲调研 → 按认知依赖重排 → 每章一句话主题 + 切入问题 |
-| **补充计划** | 章节级设计 | 知识点拆分、预计对话轮数、风险登记 |
-| **章节写作** | 每章 `.md` | ≥6 轮对话、≥5000 字、Mermaid 图、计算板块分离 |
-| **质量检查** | 评审报告 | 13 项必过清单（对话轮数、字数、推导自洽、人设一致等） |
-| **统稿组装** | 成品书 | 统一语气/篇幅、章节衔接、打包分发 |
-
----
-
-## 人物设定
-
-| 角色 | 身份 | 话风 |
-|------|------|------|
-| **老谟** | 毒舌导师，风趣一针见血，专治想当然 | "先别急着记结论。如果让你从零造，你第一步干什么？" |
-| **造物主** | 初学者替身，好奇、爱追问、会犯错 | "等等，那这个约定是谁定的？凭什么？" |
-
-> 详细人设与话术库见 [`references/人物设定与话术.md`](.codebuddy/skills/socratic-book-coauthor/references/人物设定与话术.md)
 
 ---
 
