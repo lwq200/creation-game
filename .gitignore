@@ -1,0 +1,15 @@
+# 项目数据目录（本地会话状态，不进入仓库）
+.codebuddy/
+
+# Node
+node_modules/
+
+# 构建产物
+数学基础系列/.vitepress/dist/
+数学基础系列/.vitepress/cache/
+数学基础系列/.vitepress/.temp/
+
+# 系统与日志
+*.log
+.DS_Store
+Thumbs.db
