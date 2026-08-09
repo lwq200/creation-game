@@ -60,3 +60,38 @@
 1. 从 `丛书蓝图_v0.1.md` 通读拆分逻辑与全书路线图。
 2. 打开目标册的 `蓝图_v0.1.md`，即得该册章节表、严谨推理补点、计算训练设计。
 3. 对 AI 说一句：「用老谟造物主对话体，按 `册NN-XXX/蓝图_v0.1.md` 写第 1 章」，即可逐章开写。
+
+---
+
+## 在线阅读（GitHub Pages）
+
+本系列已部署为可视化站点（KaTeX 公式渲染 + Mermaid 图 + 侧边栏导航 + 全文搜索 + 暗黑模式）：
+
+- **在线阅读**：<https://lwq200.github.io/creation-game/>
+- 推送 `main` 分支后，GitHub Actions 自动重新构建并部署。
+
+## 本地开发
+
+```bash
+cd 数学基础系列
+npm install        # 安装 VitePress 及 KaTeX / Mermaid 插件
+npm run dev        # 本地开发预览（http://localhost:5173）
+npm run build      # 生产构建，产物在 .vitepress/dist/
+npm run preview    # 预览构建产物
+```
+
+## 目录结构（站点部分）
+
+```text
+数学基础系列/
+├── index.md                        # 站点首页
+├── .vitepress/
+│   ├── config.mts                  # VitePress 配置（侧边栏 / 搜索 / KaTeX / Mermaid）
+│   └── theme/                      # 自定义主题样式
+├── 丛书蓝图_v0.1.md                # 全套规划
+└── 册01 ~ 册07/                    # 各册正文（Markdown 源）
+```
+
+## 开源许可
+
+本系列以 **CC BY 4.0** 开源，详见 `LICENSE`。可自由共享与改编，须注明出处。
